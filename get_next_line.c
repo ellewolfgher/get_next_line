@@ -6,14 +6,14 @@
 /*   By: ewolfghe <ewolfghe@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 23:03:11 by ewolfghe          #+#    #+#             */
-/*   Updated: 2022/09/25 21:39:56 by ewolfghe         ###   ########.fr       */
+/*   Updated: 2022/09/25 23:07:41 by ewolfghe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*get_line_extras(char **str);
-void	ft_free(char **s);
+static char	*get_line_extras(char **str);
+static void	ft_free(char **s);
 
 char	*get_next_line(int fd)
 {
@@ -44,7 +44,7 @@ char	*get_next_line(int fd)
 	return (ft_free(&str), get_line_extras(&s));
 }
 
-char	*get_line_extras(char **s)
+static char	*get_line_extras(char **s)
 {
 	char	*str;
 	char	*aux;
@@ -69,7 +69,7 @@ char	*get_line_extras(char **s)
 	return (str);
 }
 
-void	ft_free(char **s)
+static void	ft_free(char **s)
 {
 	if (s[0])
 	{
