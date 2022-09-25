@@ -6,13 +6,11 @@
 /*   By: ewolfghe <ewolfghe@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 23:03:11 by ewolfghe          #+#    #+#             */
-/*   Updated: 2022/09/23 00:09:18 by ewolfghe         ###   ########.fr       */
+/*   Updated: 2022/09/25 21:39:56 by ewolfghe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <fcntl.h>
-#include <stdio.h>
 
 char	*get_line_extras(char **str);
 void	ft_free(char **s);
@@ -24,7 +22,7 @@ char	*get_next_line(int fd)
 	char		*aux;
 	size_t		rd;
 
-	if (fd < 0 || BUFFER_SIZE < 1)
+	if (fd < 0 || BUFFER_SIZE < 1 || read(fd, 0, 0))
 		return (NULL);
 	str = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	rd = read(fd, str, BUFFER_SIZE);
@@ -43,8 +41,7 @@ char	*get_next_line(int fd)
 			break ;
 		rd = read(fd, str, BUFFER_SIZE);
 	}
-	ft_free(&str);
-	return (get_line_extras(&s));
+	return (ft_free(&str), get_line_extras(&s));
 }
 
 char	*get_line_extras(char **s)
