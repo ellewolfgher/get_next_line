@@ -6,7 +6,7 @@
 /*   By: ewolfghe <ewolfghe@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 22:07:55 by ewolfghe          #+#    #+#             */
-/*   Updated: 2022/09/25 22:12:51 by ewolfghe         ###   ########.fr       */
+/*   Updated: 2022/09/25 22:30:32 by ewolfghe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ void	ft_free(char **s);
 
 char	*get_next_line(int fd)
 {
-	static char	*s[FD_MAX];
+	static char	*s[1024];
 	char		*str;
 	char		*aux;
 	size_t		rd;
 
-	if (fd < 0 || BUFFER_SIZE < 1 || read(fd, 0, 0))
+	if (fd < 0 || fd > 1024 || BUFFER_SIZE < 1 || read(fd, 0, 0))
 		return (NULL);
 	str = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	rd = read(fd, str, BUFFER_SIZE);

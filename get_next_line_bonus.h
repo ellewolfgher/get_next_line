@@ -6,13 +6,12 @@
 /*   By: ewolfghe <ewolfghe@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 22:09:05 by ewolfghe          #+#    #+#             */
-/*   Updated: 2022/09/25 22:27:19 by ewolfghe         ###   ########.fr       */
+/*   Updated: 2022/09/25 22:30:11 by ewolfghe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
-# define FD_MAX 1024
 
 # include <unistd.h>
 # include <stdlib.h>
