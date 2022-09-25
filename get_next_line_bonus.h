@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ewolfghe <ewolfghe@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 23:02:40 by ewolfghe          #+#    #+#             */
-/*   Updated: 2022/09/25 22:15:37 by ewolfghe         ###   ########.fr       */
+/*   Created: 2022/09/25 22:09:05 by ewolfghe          #+#    #+#             */
+/*   Updated: 2022/09/25 22:15:29 by ewolfghe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
+# define FD_MAX 1046
 
 # include <unistd.h>
 # include <stdlib.h>
