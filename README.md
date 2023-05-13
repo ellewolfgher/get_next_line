@@ -21,6 +21,8 @@
 <h4 align=center>New Concepts</h4>
 <h3 align=center>Static Variables and File Descriptor Manipulation</h3>
 
+---
+
 <h3 align=center>
 Principal
 </h3>
